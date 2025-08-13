@@ -638,9 +638,22 @@ class LLMDataAnalysisApp:
                 # Start analysis session
                 session = self.analyst.start_analysis_session(df, uploaded_file.name)
                 
+                # Clean dataframe for Arrow compatibility
+                df_clean = df.copy()
+                for col in df_clean.columns:
+                    if df_clean[col].dtype == 'object':
+                        # Convert mixed types to string
+                        df_clean[col] = df_clean[col].astype(str)
+                    elif pd.api.types.is_integer_dtype(df_clean[col]):
+                        # Convert Int64 to regular int64
+                        df_clean[col] = df_clean[col].astype('int64')
+                    elif pd.api.types.is_float_dtype(df_clean[col]):
+                        # Convert Float64 to regular float64
+                        df_clean[col] = df_clean[col].astype('float64')
+                
                 # Store in session state
                 st.session_state['analysis_session'] = session
-                st.session_state['dataframe'] = df
+                st.session_state['dataframe'] = df_clean
                 
                 st.success(f"✅ Successfully loaded {uploaded_file.name}")
                 
@@ -657,7 +670,7 @@ class LLMDataAnalysisApp:
                 
                 # Show data preview
                 st.subheader("📋 Data Preview")
-                st.dataframe(df.head(10), use_container_width=True)
+                st.dataframe(df_clean.head(10), use_container_width=True)
                 
                 # Column information
                 with st.expander("📝 Column Information"):
@@ -701,9 +714,17 @@ class LLMDataAnalysisApp:
         # Question input
         col1, col2 = st.columns([3, 1])
         
+        # Check for pending question from sample buttons
+        if 'pending_question' in st.session_state:
+            default_question = st.session_state['pending_question']
+            del st.session_state['pending_question']
+        else:
+            default_question = ""
+        
         with col1:
             user_question = st.text_input(
                 "Ask a question about your data:",
+                value=default_question,
                 placeholder="e.g., 'What are the main drivers of revenue?'",
                 key="question_input"
             )
@@ -717,9 +738,9 @@ class LLMDataAnalysisApp:
         for i, question in enumerate(sample_questions[:4]):
             col = cols[i % 2]
             if col.button(question, key=f"sample_{i}"):
-                st.session_state.question_input = question
-                user_question = question
-                ask_button = True
+                # Use st.rerun() to refresh with new question
+                st.session_state['pending_question'] = question
+                st.rerun()
         
         # Process question
         if ask_button and user_question.strip():
@@ -884,12 +905,12 @@ class LLMDataAnalysisApp:
                 with col2:
                     if pd.api.types.is_numeric_dtype(col_data):
                         fig = px.histogram(df, x=col, title=f'Distribution of {col}')
-                        st.plotly_chart(fig, use_container_width=True)
+                        st.plotly_chart(fig, use_container_width=True, key=f"hist_{col}_{i}")
                     else:
                         value_counts = col_data.value_counts().head(10)
                         fig = px.bar(x=value_counts.index, y=value_counts.values,
                                    title=f'Top Values in {col}')
-                        st.plotly_chart(fig, use_container_width=True)
+                        st.plotly_chart(fig, use_container_width=True, key=f"bar_{col}_{i}")
     
     def run_app(self):
         """Main application interface"""
