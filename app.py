@@ -25,6 +25,21 @@ import seaborn as sns
 import io
 import base64
 
+def safe_json_convert(obj):
+    """Convert numpy types to Python types for JSON serialization"""
+    if isinstance(obj, np.integer):
+        return int(obj)
+    elif isinstance(obj, np.floating):
+        return float(obj) if not np.isnan(obj) else None
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    elif isinstance(obj, dict):
+        return {k: safe_json_convert(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [safe_json_convert(v) for v in obj]
+    else:
+        return obj
+
 # Mock LLM for demo (replace with real OpenAI integration)
 class MockLLMAnalyst:
     def __init__(self):
@@ -100,9 +115,9 @@ class MockLLMAnalyst:
             'recommendations': self._generate_recommendations(df, 'summary'),
             'visualizations': ['histogram', 'correlation_matrix'],
             'technical_details': {
-                'shape': df.shape,
-                'dtypes': df.dtypes.to_dict(),
-                'missing_values': missing_data.to_dict()
+                'shape': [int(x) for x in df.shape],
+                'dtypes': {k: str(v) for k, v in df.dtypes.to_dict().items()},
+                'missing_values': {k: int(v) for k, v in missing_data.to_dict().items()}
             }
         }
     
@@ -146,7 +161,7 @@ class MockLLMAnalyst:
             'recommendations': self._generate_recommendations(df, 'correlation'),
             'visualizations': ['correlation_matrix', 'scatter_plots'],
             'technical_details': {
-                'correlation_matrix': corr_matrix.to_dict(),
+                'correlation_matrix': {k: {k2: float(v2) if not np.isnan(v2) else None for k2, v2 in v.items()} for k, v in corr_matrix.to_dict().items()},
                 'strong_correlations': strong_correlations
             }
         }
@@ -423,14 +438,14 @@ class IntelligentDataAnalyst:
         """Start a new analysis session with uploaded data"""
         session_id = f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{hash(dataset_name) % 10000}"
         
-        # Generate dataset summary
+        # Generate dataset summary (convert numpy types to Python types for JSON serialization)
         summary = {
-            'rows': len(df),
-            'columns': len(df.columns),
-            'numeric_columns': len(df.select_dtypes(include=[np.number]).columns),
-            'categorical_columns': len(df.select_dtypes(exclude=[np.number]).columns),
-            'missing_values': df.isnull().sum().sum(),
-            'memory_usage': df.memory_usage(deep=True).sum()
+            'rows': int(len(df)),
+            'columns': int(len(df.columns)),
+            'numeric_columns': int(len(df.select_dtypes(include=[np.number]).columns)),
+            'categorical_columns': int(len(df.select_dtypes(exclude=[np.number]).columns)),
+            'missing_values': int(df.isnull().sum().sum()),
+            'memory_usage': int(df.memory_usage(deep=True).sum())
         }
         
         session = AnalysisSession(
@@ -461,7 +476,7 @@ class IntelligentDataAnalyst:
             VALUES (?, ?, ?, ?, ?, ?)
         ''', (
             session.id, session.dataset_name, session.upload_time.isoformat(),
-            json.dumps(session.dataset_summary), len(session.questions_asked),
+            json.dumps(safe_json_convert(session.dataset_summary)), len(session.questions_asked),
             datetime.now().isoformat()
         ))
         
