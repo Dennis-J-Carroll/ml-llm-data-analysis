@@ -40,6 +40,39 @@ def safe_json_convert(obj):
     else:
         return obj
 
+def clean_dataframe_for_arrow(df):
+    """Clean dataframe to be compatible with PyArrow serialization"""
+    df_clean = df.copy()
+    
+    for col in df_clean.columns:
+        col_dtype = df_clean[col].dtype
+        
+        # Handle nullable integer types
+        if col_dtype.name.startswith('Int') or col_dtype.name.startswith('Float'):
+            if col_dtype.name.startswith('Int'):
+                # Convert nullable Int64 to regular int64, fill NaN with 0
+                df_clean[col] = df_clean[col].fillna(0).astype('int64')
+            else:
+                # Convert nullable Float64 to regular float64
+                df_clean[col] = df_clean[col].astype('float64')
+        
+        # Handle object columns with mixed types
+        elif col_dtype == 'object':
+            # Try to infer better type, otherwise convert to string
+            try:
+                # Check if it's actually numeric
+                pd.to_numeric(df_clean[col], errors='raise')
+                df_clean[col] = pd.to_numeric(df_clean[col])
+            except:
+                # Convert to string to handle mixed types
+                df_clean[col] = df_clean[col].astype(str)
+        
+        # Handle datetime with timezone (not Arrow compatible)
+        elif 'datetime64[ns,' in str(col_dtype):
+            df_clean[col] = df_clean[col].dt.tz_localize(None)
+    
+    return df_clean
+
 # Mock LLM for demo (replace with real OpenAI integration)
 class MockLLMAnalyst:
     def __init__(self):
@@ -639,17 +672,7 @@ class LLMDataAnalysisApp:
                 session = self.analyst.start_analysis_session(df, uploaded_file.name)
                 
                 # Clean dataframe for Arrow compatibility
-                df_clean = df.copy()
-                for col in df_clean.columns:
-                    if df_clean[col].dtype == 'object':
-                        # Convert mixed types to string
-                        df_clean[col] = df_clean[col].astype(str)
-                    elif pd.api.types.is_integer_dtype(df_clean[col]):
-                        # Convert Int64 to regular int64
-                        df_clean[col] = df_clean[col].astype('int64')
-                    elif pd.api.types.is_float_dtype(df_clean[col]):
-                        # Convert Float64 to regular float64
-                        df_clean[col] = df_clean[col].astype('float64')
+                df_clean = clean_dataframe_for_arrow(df)
                 
                 # Store in session state
                 st.session_state['analysis_session'] = session
@@ -885,7 +908,7 @@ class LLMDataAnalysisApp:
         # Column profiling
         st.subheader("📊 Column Analysis")
         
-        for col in df.columns[:5]:  # Limit to first 5 columns
+        for i, col in enumerate(df.columns[:5]):  # Limit to first 5 columns
             with st.expander(f"📈 {col} ({df[col].dtype})"):
                 col_data = df[col]
                 
