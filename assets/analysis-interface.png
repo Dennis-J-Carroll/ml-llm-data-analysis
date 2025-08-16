@@ -1,0 +1,91 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f9fa"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="50" fill="#8e44ad"/>
+  <text x="20" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">LLM-Powered Data Analysis Tool</text>
+  <circle cx="530" cy="25" r="6" fill="#27ae60"/>
+  <text x="545" y="29" font-family="Arial, sans-serif" font-size="10" fill="white">AI Ready</text>
+  
+  <!-- Data Upload Section -->
+  <rect x="20" y="70" width="180" height="120" fill="white" stroke="#e9ecef" stroke-width="1" rx="4"/>
+  <text x="30" y="90" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">📊 Dataset Loaded</text>
+  <text x="30" y="110" font-family="Arial, sans-serif" font-size="10" fill="#666">sales_data_2024.csv</text>
+  <text x="30" y="125" font-family="Arial, sans-serif" font-size="10" fill="#666">12,547 rows × 8 columns</text>
+  <text x="30" y="140" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">✓ Data validation complete</text>
+  
+  <!-- Data Quality -->
+  <rect x="30" y="150" width="160" height="30" fill="#e8f5e8" stroke="#27ae60" stroke-width="1" rx="4"/>
+  <text x="40" y="165" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">Data Quality Score: 94%</text>
+  <text x="40" y="175" font-family="Arial, sans-serif" font-size="9" fill="#666">3 missing values, 0 duplicates</text>
+  
+  <!-- Chat Interface -->
+  <rect x="220" y="70" width="360" height="300" fill="white" stroke="#e9ecef" stroke-width="1" rx="4"/>
+  <rect x="220" y="70" width="360" height="30" fill="#8e44ad" rx="4"/>
+  <text x="230" y="88" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">💬 AI Data Analysis Chat</text>
+  
+  <!-- User Question 1 -->
+  <rect x="450" y="115" width="120" height="35" fill="#e8f4fd" stroke="#3498db" stroke-width="1" rx="15"/>
+  <text x="460" y="130" font-family="Arial, sans-serif" font-size="10" fill="#333">What are the top 5</text>
+  <text x="460" y="142" font-family="Arial, sans-serif" font-size="10" fill="#333">products by revenue?</text>
+  
+  <!-- AI Response 1 -->
+  <rect x="230" y="160" width="260" height="55" fill="#f0f0f0" stroke="#ddd" stroke-width="1" rx="15"/>
+  <circle cx="245" cy="175" r="6" fill="#8e44ad"/>
+  <text x="255" y="178" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#8e44ad">AI Assistant</text>
+  <text x="255" y="190" font-family="Arial, sans-serif" font-size="10" fill="#333">Based on your sales data, here are the top 5</text>
+  <text x="255" y="202" font-family="Arial, sans-serif" font-size="10" fill="#333">products by revenue:</text>
+  <text x="255" y="210" font-family="Arial, sans-serif" font-size="9" fill="#666">📊 Generating visualization...</text>
+  
+  <!-- Chart Preview -->
+  <rect x="500" y="160" width="70" height="55" fill="white" stroke="#e9ecef" stroke-width="1" rx="2"/>
+  <text x="510" y="175" font-family="Arial, sans-serif" font-size="8" fill="#333">Revenue</text>
+  <rect x="505" y="180" width="8" height="25" fill="#3498db"/>
+  <rect x="515" y="185" width="8" height="20" fill="#3498db"/>
+  <rect x="525" y="190" width="8" height="15" fill="#3498db"/>
+  <rect x="535" y="195" width="8" height="10" fill="#3498db"/>
+  <rect x="545" y="200" width="8" height="5" fill="#3498db"/>
+  
+  <!-- User Question 2 -->
+  <rect x="420" y="230" width="150" height="35" fill="#e8f4fd" stroke="#3498db" stroke-width="1" rx="15"/>
+  <text x="430" y="245" font-family="Arial, sans-serif" font-size="10" fill="#333">Show me sales trends over</text>
+  <text x="430" y="257" font-family="Arial, sans-serif" font-size="10" fill="#333">the last 6 months</text>
+  
+  <!-- AI Response 2 -->
+  <rect x="230" y="275" width="280" height="70" fill="#f0f0f0" stroke="#ddd" stroke-width="1" rx="15"/>
+  <circle cx="245" cy="290" r="6" fill="#8e44ad"/>
+  <text x="255" y="293" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#8e44ad">AI Assistant</text>
+  <text x="255" y="305" font-family="Arial, sans-serif" font-size="10" fill="#333">I've analyzed your 6-month sales trends:</text>
+  <text x="255" y="317" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">📈 Overall growth: +23% vs previous period</text>
+  <text x="255" y="329" font-family="Arial, sans-serif" font-size="10" fill="#333">Peak sales in March ($2.1M)</text>
+  <text x="255" y="337" font-family="Arial, sans-serif" font-size="9" fill="#666">💡 Seasonal pattern detected</text>
+  
+  <!-- Input Area -->
+  <rect x="230" y="355" width="280" height="25" fill="white" stroke="#ddd" stroke-width="1" rx="12"/>
+  <text x="240" y="370" font-family="Arial, sans-serif" font-size="10" fill="#999">Ask questions about your data...</text>
+  <rect x="520" y="357" width="40" height="21" fill="#8e44ad" rx="10"/>
+  <text x="532" y="370" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Ask</text>
+  
+  <!-- Quick Insights Panel -->
+  <rect x="20" y="210" width="180" height="160" fill="white" stroke="#e9ecef" stroke-width="1" rx="4"/>
+  <text x="30" y="230" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">🔍 Quick Insights</text>
+  
+  <rect x="30" y="240" width="160" height="25" fill="#fff3cd" stroke="#ffc107" stroke-width="1" rx="4"/>
+  <text x="35" y="250" font-family="Arial, sans-serif" font-size="9" fill="#856404">💡 Revenue spike in Q1</text>
+  <text x="35" y="260" font-family="Arial, sans-serif" font-size="8" fill="#856404">+45% above forecast</text>
+  
+  <rect x="30" y="275" width="160" height="25" fill="#d4edda" stroke="#28a745" stroke-width="1" rx="4"/>
+  <text x="35" y="285" font-family="Arial, sans-serif" font-size="9" fill="#155724">📊 Strong correlation found</text>
+  <text x="35" y="295" font-family="Arial, sans-serif" font-size="8" fill="#155724">Marketing spend ↔ Sales</text>
+  
+  <rect x="30" y="310" width="160" height="25" fill="#cce5ff" stroke="#007bff" stroke-width="1" rx="4"/>
+  <text x="35" y="320" font-family="Arial, sans-serif" font-size="9" fill="#003d82">🎯 Opportunity detected</text>
+  <text x="35" y="330" font-family="Arial, sans-serif" font-size="8" fill="#003d82">Untapped customer segment</text>
+  
+  <rect x="30" y="345" width="160" height="20" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="4"/>
+  <text x="35" y="357" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">Mock LLM Integration Active</text>
+  
+  <!-- Watermark -->
+  <text x="450" y="395" font-family="Arial, sans-serif" font-size="8" fill="#adb5bd">LLM Data Analysis Interface Preview</text>
+</svg>
