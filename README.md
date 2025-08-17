@@ -1,10 +1,14 @@
 # 🧠 LLM-Powered Data Analysis Tool
 ## *Transform Raw Data into Executive-Ready Insights with AI-Powered Analytics*
 
+![LLM Data Analysis](assets/images/hero-analysis.svg)
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-data-analysis.streamlit.app)
 [![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)](https://python.org)
 [![AI](https://img.shields.io/badge/AI-Language%20Models-brightgreen.svg)](https://openai.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+> **🟢 **LIVE DEMO**: [https://llm-analysis-portfolio.streamlit.app](https://llm-analysis-portfolio.streamlit.app) | **⚡ Available 24/7** | **🎯 Professional showcase**: [https://llm-analysis-portfolio.streamlit.app](https://llm-analysis-portfolio.streamlit.app) | **🧠 AI-powered insights** | **🤖 Natural language queries**
 
 ---
 
@@ -152,7 +156,7 @@ pip install -r requirements.txt
 
 # Launch application
 streamlit run app.py
-# Access at http://localhost:8501
+# Access at https://llm-analysis-portfolio.streamlit.app
 ```
 
 ### **📊 Sample Data Analysis**

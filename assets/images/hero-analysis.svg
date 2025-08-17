@@ -1,0 +1,236 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- LLM Data Analysis Hero Interface -->
+  <defs>
+    <linearGradient id="llmGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity:0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="70" fill="url(#llmGrad)"/>
+  <text x="20" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="bold" fill="white">🧠 LLM-Powered Data Analysis Platform</text>
+  <text x="850" y="25" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="white">Intelligent Insights • Auto-Generated Reports</text>
+  <text x="850" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="white">Natural Language Processing</text>
+  <text x="850" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="white">🤖 AI-Powered Analytics</text>
+  
+  <!-- Main Layout: 3-column design -->
+  
+  <!-- Left Panel: Data Upload & Management -->
+  <rect x="20" y="90" width="380" height="680" fill="white" stroke="#e0e0e0" filter="url(#shadow)" rx="12"/>
+  <text x="40" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">📊 Data Source Management</text>
+  
+  <!-- File Upload Area -->
+  <rect x="40" y="140" width="340" height="120" fill="#f0fdf4" stroke="#10b981" stroke-width="2" stroke-dasharray="8,4" rx="8"/>
+  <circle cx="210" cy="180" r="20" fill="#10b981" opacity="0.2"/>
+  <text x="195" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#059669">📁</text>
+  <text x="150" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#059669">Upload CSV, Excel, or JSON</text>
+  <text x="160" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#666">Drag & drop or click to browse</text>
+  <text x="165" y="245" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#666">Max 50MB • Auto-detection</text>
+  
+  <!-- Uploaded Files List -->
+  <text x="40" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">📋 Loaded Datasets</text>
+  
+  <rect x="40" y="300" width="340" height="50" fill="#ecfdf5" stroke="#10b981" rx="8"/>
+  <circle cx="65" cy="325" r="12" fill="#10b981"/>
+  <text x="56" y="332" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="white">✓</text>
+  <text x="90" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">sales_data_2024.csv</text>
+  <text x="90" y="335" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#666">15,247 rows • 12 columns • Active</text>
+  <rect x="320" y="315" width="50" height="20" fill="#10b981" rx="10"/>
+  <text x="332" y="328" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Analyze</text>
+  
+  <rect x="40" y="360" width="340" height="50" fill="#f3f4f6" stroke="#d1d5db" rx="8"/>
+  <circle cx="65" cy="385" r="12" fill="#6b7280"/>
+  <text x="56" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="white">⧖</text>
+  <text x="90" y="380" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#666">customer_demographics.xlsx</text>
+  <text x="90" y="395" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#666">8,932 rows • 8 columns • Standby</text>
+  
+  <!-- Data Preview -->
+  <text x="40" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">👁️ Data Preview</text>
+  <rect x="40" y="450" width="340" height="160" fill="#fafafa" stroke="#e0e0e0" rx="8"/>
+  
+  <!-- Table Headers -->
+  <rect x="50" y="460" width="320" height="25" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="60" y="477" font-family="Monaco, monospace" font-size="10" font-weight="bold" fill="#374151">Date</text>
+  <text x="120" y="477" font-family="Monaco, monospace" font-size="10" font-weight="bold" fill="#374151">Product</text>
+  <text x="200" y="477" font-family="Monaco, monospace" font-size="10" font-weight="bold" fill="#374151">Revenue</text>
+  <text x="270" y="477" font-family="Monaco, monospace" font-size="10" font-weight="bold" fill="#374151">Region</text>
+  
+  <!-- Sample Data Rows -->
+  <text x="60" y="500" font-family="Monaco, monospace" font-size="9" fill="#6b7280">2024-03-15</text>
+  <text x="120" y="500" font-family="Monaco, monospace" font-size="9" fill="#6b7280">Widget A</text>
+  <text x="200" y="500" font-family="Monaco, monospace" font-size="9" fill="#6b7280">$1,250</text>
+  <text x="270" y="500" font-family="Monaco, monospace" font-size="9" fill="#6b7280">North</text>
+  
+  <text x="60" y="520" font-family="Monaco, monospace" font-size="9" fill="#6b7280">2024-03-15</text>
+  <text x="120" y="520" font-family="Monaco, monospace" font-size="9" fill="#6b7280">Widget B</text>
+  <text x="200" y="520" font-family="Monaco, monospace" font-size="9" fill="#6b7280">$890</text>
+  <text x="270" y="520" font-family="Monaco, monospace" font-size="9" fill="#6b7280">South</text>
+  
+  <text x="60" y="540" font-family="Monaco, monospace" font-size="9" fill="#6b7280">2024-03-16</text>
+  <text x="120" y="540" font-family="Monaco, monospace" font-size="9" fill="#6b7280">Widget C</text>
+  <text x="200" y="540" font-family="Monaco, monospace" font-size="9" fill="#6b7280">$2,100</text>
+  <text x="270" y="540" font-family="Monaco, monospace" font-size="9" fill="#6b7280">East</text>
+  
+  <text x="60" y="560" font-family="Monaco, monospace" font-size="9" fill="#6b7280">2024-03-16</text>
+  <text x="120" y="560" font-family="Monaco, monospace" font-size="9" fill="#6b7280">Widget A</text>
+  <text x="200" y="560" font-family="Monaco, monospace" font-size="9" fill="#6b7280">$1,430</text>
+  <text x="270" y="560" font-family="Monaco, monospace" font-size="9" fill="#6b7280">West</text>
+  
+  <text x="60" y="580" font-family="Monaco, monospace" font-size="9" fill="#6b7280">2024-03-17</text>
+  <text x="120" y="580" font-family="Monaco, monospace" font-size="9" fill="#6b7280">Widget D</text>
+  <text x="200" y="580" font-family="Monaco, monospace" font-size="9" fill="#6b7280">$750</text>
+  <text x="270" y="580" font-family="Monaco, monospace" font-size="9" fill="#6b7280">North</text>
+  
+  <text x="150" y="600" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7280">... showing 5 of 15,247 rows</text>
+  
+  <!-- Analysis Options -->
+  <text x="40" y="640" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">🎯 Quick Analysis</text>
+  
+  <rect x="40" y="650" width="100" height="30" fill="#3b82f6" rx="15"/>
+  <text x="65" y="670" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="white">📈 Trends</text>
+  
+  <rect x="150" y="650" width="100" height="30" fill="#8b5cf6" rx="15"/>
+  <text x="175" y="670" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="white">📊 Summary</text>
+  
+  <rect x="260" y="650" width="120" height="30" fill="#10b981" rx="15"/>
+  <text x="285" y="670" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="white">🤖 AI Insights</text>
+  
+  <rect x="40" y="690" width="340" height="30" fill="#f59e0b" rx="15"/>
+  <text x="170" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="white">🚀 Generate Full Report</text>
+  
+  <!-- Center Panel: AI Analysis Interface -->
+  <rect x="420" y="90" width="400" height="680" fill="white" stroke="#e0e0e0" filter="url(#shadow)" rx="12"/>
+  <text x="440" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">🧠 AI Analysis Assistant</text>
+  
+  <!-- Chat Interface -->
+  <rect x="440" y="140" width="360" height="400" fill="#f9fafb" stroke="#e5e7eb" rx="8"/>
+  
+  <!-- AI Message -->
+  <rect x="460" y="160" width="320" height="80" fill="white" stroke="#d1d5db" rx="15"/>
+  <circle cx="480" cy="180" r="12" fill="#10b981"/>
+  <text x="473" y="187" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="white">🤖</text>
+  <text x="500" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#059669">AI Assistant</text>
+  <text x="500" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#374151">I've analyzed your sales data. Here are the key insights:</text>
+  <text x="500" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#374151">• Revenue increased 23% this quarter</text>
+  <text x="500" y="225" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#374151">• Widget A is your top performer (+45% growth)</text>
+  
+  <!-- User Message -->
+  <rect x="480" y="260" width="300" height="60" fill="#3b82f6" rx="15"/>
+  <text x="500" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="white">You</text>
+  <text x="500" y="295" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="white">Show me the regional performance breakdown</text>
+  <text x="500" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="white">and create a visualization</text>
+  
+  <!-- AI Response with Chart -->
+  <rect x="460" y="340" width="320" height="180" fill="white" stroke="#d1d5db" rx="15"/>
+  <circle cx="480" cy="360" r="12" fill="#10b981"/>
+  <text x="473" y="367" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="white">🤖</text>
+  <text x="500" y="365" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#059669">AI Assistant</text>
+  <text x="500" y="380" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#374151">Here's the regional performance analysis:</text>
+  
+  <!-- Mini Chart in Response -->
+  <rect x="520" y="390" width="240" height="100" fill="#f9fafb" stroke="#e5e7eb" rx="5"/>
+  
+  <!-- Chart Bars -->
+  <rect x="540" y="430" width="40" height="50" fill="#3b82f6"/>
+  <text x="555" y="425" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold" fill="#3b82f6">$125K</text>
+  <text x="548" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">North</text>
+  
+  <rect x="590" y="440" width="40" height="40" fill="#10b981"/>
+  <text x="605" y="435" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold" fill="#10b981">$98K</text>
+  <text x="600" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">East</text>
+  
+  <rect x="640" y="450" width="40" height="30" fill="#f59e0b"/>
+  <text x="655" y="445" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold" fill="#f59e0b">$76K</text>
+  <text x="650" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">South</text>
+  
+  <rect x="690" y="460" width="40" height="20" fill="#ef4444"/>
+  <text x="705" y="455" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold" fill="#ef4444">$52K</text>
+  <text x="702" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#333">West</text>
+  
+  <text x="500" y="510" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#374151">💡 North region leads, West needs attention</text>
+  
+  <!-- Input Area -->
+  <rect x="440" y="560" width="360" height="50" fill="white" stroke="#d1d5db" rx="25"/>
+  <text x="470" y="590" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#9ca3af">Ask me anything about your data...</text>
+  <circle cx="770" cy="585" r="18" fill="#10b981"/>
+  <text x="760" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="white">🚀</text>
+  
+  <!-- Suggested Questions -->
+  <text x="440" y="640" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">💭 Suggested Questions</text>
+  
+  <rect x="440" y="650" width="170" height="30" fill="#f3f4f6" stroke="#d1d5db" rx="15"/>
+  <text x="450" y="670" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7280">"What are the top trends?"</text>
+  
+  <rect x="620" y="650" width="180" height="30" fill="#f3f4f6" stroke="#d1d5db" rx="15"/>
+  <text x="630" y="670" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7280">"Predict next month's sales"</text>
+  
+  <rect x="440" y="690" width="170" height="30" fill="#f3f4f6" stroke="#d1d5db" rx="15"/>
+  <text x="450" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7280">"Find anomalies"</text>
+  
+  <rect x="620" y="690" width="180" height="30" fill="#f3f4f6" stroke="#d1d5db" rx="15"/>
+  <text x="630" y="710" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7280">"Generate executive summary"</text>
+  
+  <!-- Right Panel: Generated Reports & Visualizations -->
+  <rect x="840" y="90" width="340" height="680" fill="white" stroke="#e0e0e0" filter="url(#shadow)" rx="12"/>
+  <text x="860" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">📈 Generated Insights</text>
+  
+  <!-- Key Metrics Summary -->
+  <rect x="860" y="140" width="300" height="100" fill="#f0fdf4" stroke="#10b981" rx="8"/>
+  <text x="880" y="165" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#059669">🎯 Key Performance Indicators</text>
+  <text x="880" y="185" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">Total Revenue: $351,000 (+23%)</text>
+  <text x="880" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">Average Order: $156 (+8%)</text>
+  <text x="880" y="215" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">Growth Rate: 23.4% QoQ</text>
+  <text x="880" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">Top Product: Widget A (45% growth)</text>
+  
+  <!-- Trend Analysis -->
+  <rect x="860" y="260" width="300" height="140" fill="white" stroke="#e5e7eb" rx="8"/>
+  <text x="880" y="285" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">📊 Trend Analysis</text>
+  
+  <!-- Simple trend line -->
+  <rect x="880" y="300" width="260" height="80" fill="#f9fafb" stroke="#e5e7eb"/>
+  <polyline points="890,360 920,350 950,340 980,330 1010,320 1040,310 1070,300 1100,290 1130,285" 
+            fill="none" stroke="#10b981" stroke-width="3"/>
+  <text x="880" y="395" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7280">Consistent upward trend with seasonal peaks</text>
+  
+  <!-- AI Recommendations -->
+  <rect x="860" y="420" width="300" height="120" fill="#fef3e7" stroke="#f59e0b" rx="8"/>
+  <text x="880" y="445" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#c2410c">🤖 AI Recommendations</text>
+  <text x="880" y="465" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">• Focus marketing on North region</text>
+  <text x="880" y="480" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">• Investigate Widget C pricing</text>
+  <text x="880" y="495" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">• Expand Widget A production</text>
+  <text x="880" y="510" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">• Review West region strategy</text>
+  <text x="880" y="525" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#333">• Target Q2 growth: 28%</text>
+  
+  <!-- Export Options -->
+  <rect x="860" y="560" width="300" height="80" fill="white" stroke="#e5e7eb" rx="8"/>
+  <text x="880" y="585" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">📤 Export Report</text>
+  
+  <rect x="880" y="595" width="80" height="30" fill="#3b82f6" rx="5"/>
+  <text x="905" y="615" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="white">PDF Report</text>
+  
+  <rect x="970" y="595" width="80" height="30" fill="#10b981" rx="5"/>
+  <text x="995" y="615" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Excel Data</text>
+  
+  <rect x="1060" y="595" width="80" height="30" fill="#8b5cf6" rx="5"/>
+  <text x="1080" y="615" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="bold" fill="white">PowerPoint</text>
+  
+  <!-- Processing Status -->
+  <rect x="860" y="660" width="300" height="100" fill="#f8fafc" stroke="#cbd5e1" rx="8"/>
+  <text x="880" y="685" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">⚙️ Processing Status</text>
+  <text x="880" y="705" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#6b7280">✅ Data uploaded and validated</text>
+  <text x="880" y="720" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#6b7280">✅ AI analysis completed</text>
+  <text x="880" y="735" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#6b7280">✅ Insights generated</text>
+  <text x="880" y="750" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="bold" fill="#10b981">🟢 Ready for next analysis</text>
+  
+  <!-- Status Bar -->
+  <rect x="0" y="770" width="1200" height="30" fill="#f1f5f9"/>
+  <text x="20" y="790" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#64748b">🔄 System Status: Online • 📊 Models loaded • ⚡ Response time: 1.2s avg • 🎯 Analysis accuracy: 94.7% • 💾 Data secure</text>
+  <text x="1050" y="790" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="bold" fill="#10b981">✓ Live Demo Active</text>
+</svg>
