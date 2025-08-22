@@ -8,15 +8,12 @@
 [![AI](https://img.shields.io/badge/AI-Language%20Models-brightgreen.svg)](https://openai.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **🟢 **LIVE DEMO**: [https://llm-analysis-portfolio.streamlit.app](https://llm-analysis-portfolio.streamlit.app) | **⚡ Available 24/7** | **🎯 Professional showcase**: [https://llm-analysis-portfolio.streamlit.app](https://llm-analysis-portfolio.streamlit.app) | **🧠 AI-powered insights** | **🤖 Natural language queries**
 
----
+##**BUSINESS VALUE**
 
-## 💼 **BUSINESS VALUE**
+**Problem Addressed**: Business leaders and analysts spend hours manually interpreting data, creating reports, and explaining statistical findings to non-technical stakeholders, creating bottlenecks in data-driven decision making.
 
-**🎯 Problem Addressed**: Business leaders and analysts spend hours manually interpreting data, creating reports, and explaining statistical findings to non-technical stakeholders, creating bottlenecks in data-driven decision making.
-
-**💡 Solution Provided**: AI-powered data analysis platform that automatically interprets datasets, generates human-readable insights, and creates comprehensive reports with natural language explanations of statistical findings.
+**Solution Provided**: AI-powered data analysis platform that automatically interprets datasets, generates human-readable insights, and creates comprehensive reports with natural language explanations of statistical findings.
 
 **📈 Productivity Benefits**:
 - **Accelerated analysis** from hours to minutes for data interpretation
@@ -26,19 +23,6 @@
 - **Consistent analysis quality** regardless of analyst experience level
 
 ---
-
-## 🌐 **LIVE DEMO & PREVIEW**
-
-<table>
-<tr>
-<td width="50%">
-
-### 🚀 **Try the Demo**
-**[→ Launch Live Application](https://llm-data-analysis.streamlit.app)**  
-*Upload CSV files and ask questions in plain English*
-
-**[📹 View Analysis Demo](https://youtube.com/demo-link)**  
-*See AI-powered insights in action*
 
 </td>
 <td width="50%">
